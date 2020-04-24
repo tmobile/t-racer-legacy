@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/ip_address_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Mirror IP Address:" />
+
+    <EditText
+        android:id="@+id/ip_address_val"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ip_address_label"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="@string/ip_address"
+        android:inputType="text"
+        android:text="@string/ip_address"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/rg_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ip_address_val"
+        android:layout_marginLeft="10dp"
+        android:text="Resolution:" />
+
+    <RadioGroup
+        android:id="@+id/resolution_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rg_header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:checkedButton="@id/resAuto">
+
+        <RadioButton
+            android:id="@+id/res1080p"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1080p" />
+
+        <RadioButton
+            android:id="@+id/res720p"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="720p" />
+
+        <RadioButton
+            android:id="@+id/res640"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="640" />
+
+        <RadioButton
+            android:id="@+id/res320"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="320" />
+
+        <RadioButton
+            android:id="@+id/res176"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="176" />
+
+        <RadioButton
+            android:id="@+id/resAuto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="auto" />
+
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/resolution_group"
+        android:text="Close" />
+
+</RelativeLayout>
